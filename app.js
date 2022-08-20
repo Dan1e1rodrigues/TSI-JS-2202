@@ -1,0 +1,1 @@
+console.log('Óla, mundo no console, mas com script externo');

@@ -4,13 +4,24 @@ O valor do serviço pode variar conforme o prazo.
 Os valores e prazos devem ser armazenados em uma matriz.
 O cálculo deve ficar obrigatoriamente em uma função.
 */
-let servico = parseInt(prompt('Escolha um dos nossos serviços [1], [2], [3] '));
 
-let horas = parseInt(prompt('Quantidade de horas de espera '));
+let tabela = [ ['$$$', '$$','$'], ['$$$$', '$$$$$', '$$$$$$'], ['Não faz', 'Não faz'] ];
 
-let valores = ['R$100', 'R$200', 'R$300', 'R$400', 'R$500', 'R$600', 'R$700', 'R$800', 'R$900', 'R$1000'];
+//Serviço 
+let servico = prompt('Entre com o serviço: \n0 - troca de óleo \n1 - Balanceamento \n2 - Calibragem)');
+//Dia
+let prazo = prompt("Entre com o prazo: \n0 - Um dia \n1 - Dois dias \n2 - Tres dias ");
 
-document.write(valores.langht);
+if( validaEntrada(servico) && validaEntrada(prazo) ){
 
+    alert("O serviço ficará em: " + tabela[servico][prazo]);
 
+}else{
+     
+    alert("ERROR: verifique os valores inseridos e tente novamente!");
+}
 
+function validaEntrada(dadoUsuario) {
+
+    return dadoUsuario >= 0 && dadoUsuario <= 2 ? true : false;
+}

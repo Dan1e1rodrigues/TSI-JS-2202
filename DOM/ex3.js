@@ -12,8 +12,9 @@ let e;
 // e = document.forms[0][1];
 // e = document.scripts;
 // e = document.scripts[2];
-
-e = document.scripts[2].getAttribute('src');
+// e = document.querySelector('spam');
+// e = document.querySelector('div. row');
+e = document.querySelector('input#task');
 
 console.log(e);
 

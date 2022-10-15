@@ -1,28 +1,19 @@
-// sessionStorage.setItem('nome', 'Camila');
-// sessionStorage.setItem('Sobrenome', 'Silva');
+document.getElementById("botao").addEventListener("click", (e) => {
+    e.preventDefault();
 
+    let input = document.getElementById("entrada");
+    let saida = document.getElementById("mostrar");
 
-//como trabalhar com LOCAL STORAGE
-let btn=document.getElementById('botao');
+    // Pegamos os dados obtidos no formulário e guardamos no localStorage
+    localStorage.setItem("nomeUsuario", input.value);
 
-btn.addEventListener('click', mostrar);
+    saida.innerText = input.value;
+    input.value = "";
+})
 
-function mostrar(evento){
-    evento.preventDefault();
+// Coloca o dado do localStorage no span ao recarregar a página
+document.getElementById("mostrar").innerText = localStorage.getItem("nomeUsuario");
 
-    let entrada = document.getElementById('entrada').value;
-    let mostrar=document.getElementById('mostrar').innerText=valor;
-    let valor=entrada.value;
-    mostrar.innerText=valor;
-    entrada.value='';
+// Apaga o dado do localStorage
+// localStorage.removeItem("nomeUsuario");
 
-
-    //após obtermos o dado do usuário
-    //vamos guardá-lo no local storage
-    sessionStorage.setItem('dadoUsuario', valor);
-}
-
-//para recuperar o dado de local storage
-//usamo o sessionStorage.getItem()
-document.querySelector('mostrar').value=
-    sessionStorage.getItem('dadoDoUsuario');

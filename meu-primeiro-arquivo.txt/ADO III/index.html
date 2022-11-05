@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADO-3 CURIOSIDADES SOBRE OS NÚMEROS </title>
+    <link rel="stylesheet" type="text/css" href="index.css" 
+</head>
+<body>
+    <!--Texto principal, para guiar usuario-->
+    <h1>Digite um número para descobrir uma curiosidade sobre o mesmo</h1>
+
+    <!--Area para o usuario digitar o número e descobrir sobre a curiosidade -->
+    <form>
+        <label for="numberToPreview">Digite um Número</label>
+        <br>
+        <input type="text" name="numberToPreview" id="numberToPreview" placeholder="Digite...">
+        <br><br>
+        <button id="send">Buscar</button>
+    </form>
+
+    <br>
+    <h2>Resultado</h2>
+    <label for="response">Curiosidade</label>
+    <br>
+    <textarea name="response" id="response" cols="80" rows="10" readonly></textarea>
+    
+<script src="index.js"></script>
+</body>
+</html>
